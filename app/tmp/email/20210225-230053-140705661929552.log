@@ -1,0 +1,12 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: brunoeterres@gmail.com
+Date: Thu, 25 Feb 2021 23:00:53 -0000
+Message-ID: <161429405399.11.9172088146283485613@54deb4852522>
+
+Someone asked for password reset for email brunoeterres@gmail.com. Follow the link below:
+http://127.0.0.1:8000/auth/reset/MQ/ainelh-17e3f43a9d6c739fcca29fc4379a8968/
+-------------------------------------------------------------------------------

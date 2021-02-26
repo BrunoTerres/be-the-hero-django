@@ -3,7 +3,7 @@ from django.core.files.storage import FileSystemStorage
 
 
 def index(request):
-    return render(request, 'base.html')
+    return render(request, 'hero/home.html')
 
 def image_upload(request):
     if request.method == "POST" and request.FILES["image_file"]:
@@ -15,4 +15,4 @@ def image_upload(request):
         return render(request, "upload.html", {
             "image_url": image_url
         })
-    return render(request, "hero/pages/upload.html")
+    return render(request, "hero/upload.html")
