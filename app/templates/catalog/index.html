@@ -1,0 +1,15 @@
+{% extends 'catalog/base_generic.html' %}
+
+{% block title %}<title>Local Library</title>{% endblock %}
+{% block content %}
+    <h1>Be The Hero</h1>
+    <p>Welcome to Be The Hero, a website developed by <em>Bruno Terres</em>!</p>
+    <h2>Dynamic content</h2>
+    <p>We have the following record counts:</p>
+    <ul>
+        <li><strong>Incidents:</strong> {{ num_incidents }}</li>
+        <li><strong>NGO's:</strong>{{ num_ngos }}</li>
+    </ul>
+
+    <p>You have visited this page {{ num_visits }} time{% if num_visits > 1 %}s{% endif %}.</p>
+{% endblock %}

@@ -5,17 +5,31 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('books/', views.BookListView.as_view(), name='books'), 
-    path('book/<int:pk>', views.BookDetailView.as_view(), name='book-detail'),
-    path('book/create', views.BookCreateView.as_view(), name='book-create'),
-    path('book/<int:pk>/update', views.BookUpdateView.as_view(), name='book-update'),
-    path('book/<int:pk>/delete', views.BookDeleteView.as_view(), name='book-delete'),
-    path('authors/', views.AuthorListView.as_view(), name='authors'),
-    path('author/<int:pk>', views.AuthorDetailView.as_view(), name='author-detail'),
-    path('author/create/', views.AuthorCreate.as_view(), name='author-create'),
-    path('author/<int:pk>/update', views.AuthorUpdate.as_view(), name='author-update'),
-    path('author/<int:pk>/delete', views.AuthorDelete.as_view(), name='author-delete'),
-    path('mybooks/', views.LoanedBooksByUserListView.as_view(), name='my-borrowed'),
-    path('borrowedbooks/', views.LoanedBooksListView.as_view(), name='borrowed-books'),
-    path('book/<uuid:pk>/renew/', views.renew_book_librarian, name='renew-book-librarian'),
+
+    path('incidents/', views.IncidentListView.as_view(), name='incidents'), 
+
+    path('incident/<int:pk>', views.IncidentDetailView.as_view(), name='incident-detail'),
+
+    path('incident/create', views.IncidentCreateView.as_view(), name='incident-create'),
+
+    path('incident/<int:pk>/update', views.IncidentUpdateView.as_view(), name='incident-update'),
+
+    path('incident/<int:pk>/delete', views.IncidentDeleteView.as_view(), name='incident-delete'),
+
+    path('ngos/', views.NgoListView.as_view(), name='ngos'),
+
+    path('ngo/<int:pk>', views.NgoDetailView.as_view(), name='ngo-detail'),
+
+    path('ngo/create/', views.NgoCreate.as_view(), name='ngo-create'),
+
+    path('ngo/<int:pk>/update', views.NgoUpdate.as_view(), name='ngo-update'),
+
+    path('ngo/<int:pk>/delete', views.NgoDelete.as_view(), name='ngo-delete'),
+
+#    path('mybooks/', views.LoanedBooksByUserListView.as_view(), name='my-borrowed'),
+#
+#    path('borrowedbooks/', views.LoanedBooksListView.as_view(), name='borrowed-books'),
+#
+#    path('book/<uuid:pk>/renew/', views.renew_book_librarian, name='renew-book-librarian'),
+
 ]

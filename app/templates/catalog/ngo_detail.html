@@ -1,0 +1,24 @@
+{% extends "catalog/base_generic.html" %}
+
+{% block content %}
+
+    <h1>NGO: {{ ngo.name }}</h1>
+    <p><strong>Email:</strong><a href=""> {{ ngo.email }} </a></p>
+    <p><strong>Description:</strong> {{ ngo.description }} </p>
+    <p><strong>Whatsapp:</strong> {{ ngo.whatsapp }} </p>
+    <p><strong>City:</strong> {{ ngo.city }} </p>
+    <p><strong>UR:</strong> {{ ngo.ur }} </p>
+
+    
+    <div style="margin-left: 20px; margin-top:20px;">
+        <h4>Incidents</h4>
+
+        <d1>
+        {% for incident in ngo.incident_set.all %}
+            <dt><a href="{% url 'incident-detail' incident.pk %}">{{ incident }}</a></dt>
+            <dd>{{ Incident.description }}</dd>
+        {% endfor %}
+        </d1>
+    </div>
+
+{% endblock %}

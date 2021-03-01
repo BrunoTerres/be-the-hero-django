@@ -1,0 +1,16 @@
+{% extends "catalog/base_generic.html" %}
+
+{% block content %}
+    <h1>NGO's List</h1>
+    {% if ngo_list %}
+        <ul>
+            {% for ngo in ngo_list %}
+                <li>
+                    <a href="{{ ngo.get_absolute_url }}">{{ ngo.last_name }}</a> ({{ ngo.date_of_birth }})
+                </li>
+            {% endfor %}
+        </ul> 
+    {% else %}
+        <p>There are no NGO's to list.</p>
+    {% endif %}
+{% endblock %}

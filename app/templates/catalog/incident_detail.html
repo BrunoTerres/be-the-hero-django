@@ -1,0 +1,10 @@
+{% extends "catalog/base_generic.html" %}
+
+{% block content %}
+
+    <h1> Title: {{ incident.title }}</h1>
+    <p><strong>NGO:</strong><a href=""> {{ incident.ngo }} </a></p>
+    <p><strong>Description:</strong> {{ incident.description }} </p>
+    <p><strong>Value:</strong> {{ incident.valu }} </p>
+
+{% endblock %}

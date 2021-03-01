@@ -1,0 +1,16 @@
+{% extends "catalog/base_generic.html" %}
+
+{% block content %}
+    <h1>Incident List</h1>
+    {% if incident_list %}
+        <ul>
+            {% for incident in incident_list %}
+                <li>
+                    <a href="{{ incident.get_absolute_url }}">{{ incident.title }}</a> ({{ incident.ngo }})
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no incidets in the library.</p>
+    {% endif %}
+{% endblock %}
