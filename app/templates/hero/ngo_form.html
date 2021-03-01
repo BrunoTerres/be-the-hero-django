@@ -1,13 +1,13 @@
-{% extends 'base.html' %}
+{% extends "hero/base_generic.html" %}
 
 {% block content %}
 
     <form action="" method="post">
         {% csrf_token %}
         <table>
-            {{form.as_table }}
+            {{ form.as_table }}
         </table>
-        <input href='{{ author.get_absolute_url }}' type='submit'value="Submit"></a>
+        <input type="submit" value="Submit">
     </form>
 
 {% endblock %}

@@ -1,20 +1,16 @@
-{% extends 'base.html' %}
+{% extends "hero/base_generic.html" %}
 
 {% block content %}
-
-<h1>Ngo List</h1>
-{% if ngo_list %}
-    <div class="row">
-        {% for ngo in ngo_list %}
-            <div class="col">
-                <p>{{ ngo.name }}</p>
-                <p> {{ ngo.description }}</p>                       
-            </div>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p>There are no Tools in the Portfolio.</p>
-{% endif %}
-
-
+    <h1>NGO's List</h1>
+    {% if ngo_list %}
+        <ul>
+            {% for ngo in ngo_list %}
+                <li>
+                    <a href="{{ ngo.get_absolute_url }}">{{ ngo.name }}</a>
+                </li>
+            {% endfor %}
+        </ul> 
+    {% else %}
+        <p>There are no NGO's to list.</p>
+    {% endif %}
 {% endblock %}

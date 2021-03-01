@@ -23,7 +23,6 @@ urlpatterns = [
     path('hero/', include('hero.urls', namespace='hero')),
     path('admin/', admin.site.urls),
     path('auth/', include('authentication.urls')),
-    path('catalog/', include('catalog.urls')),
 ]
 
 if bool(settings.DEBUG):

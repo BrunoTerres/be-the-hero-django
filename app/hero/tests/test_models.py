@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from catalog.models import Author
+from hero.models import Author
 
 class AuthorModelTest(TestCase):
     @classmethod
@@ -31,12 +31,12 @@ class AuthorModelTest(TestCase):
     def test_get_absolute_url(self):
         author = Author.objects.get(id=1)
         # This will also fail if the urlconf is not defined.
-        self.assertEqual(author.get_absolute_url(), '/catalog/author/1')
+        self.assertEqual(author.get_absolute_url(), '/hero/author/1')
 
 
 # from django.test import TestCase
 
-# from catalog.models import Author
+# from hero.models import Author
 
 # class AuthorModelTest(TestCase):
 #     @classmethod
@@ -67,4 +67,4 @@ class AuthorModelTest(TestCase):
 #     def test_get_absolute_url(self):
 #         author = Author.objects.get(id=1)
 #         # This will also fail if the urlconf is not defined
-#         self.assertEqual(author.get_absolute_url(), '/catalog/author/1')
+#         self.assertEqual(author.get_absolute_url(), '/hero/author/1')

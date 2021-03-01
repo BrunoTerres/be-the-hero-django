@@ -17,9 +17,9 @@
             {% block sidebar %}
                 
                 <ul class="sidebar-nav">
-                    <li><a href="{% url 'index' %}">Home</a></li>
-                    <li><a href="{% url 'incidents' %}">All Incidents</a></li>
-                    <li><a href="{% url 'ngos' %}">All NGO's</a></li>                 
+                    <li><a href="{% url 'hero:index' %}">Home</a></li>
+                    <li><a href="{% url 'hero:incidents' %}">All Incidents</a></li>
+                    <li><a href="{% url 'hero:ngos' %}">All NGO's</a></li>                 
                 </ul>
 
                 <ul class="sidebar-nav">
@@ -31,8 +31,8 @@
                     <hr />
                     <ul class="sidebar-nav">
                         <li>Staff</li>
-                        <li><a href="{% url 'ngo-create' %}">New Ngo</a></li>
-                        <li><a href="{% url 'incident-create' %}">New Incident</a></li>
+                        <li><a href="{% url 'hero:ngo-create' %}">New Ngo</a></li>
+                        <li><a href="{% url 'hero:incident-create' %}">New Incident</a></li>
                     </ul>
 
             {% endblock %}       

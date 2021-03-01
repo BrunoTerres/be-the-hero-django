@@ -6,7 +6,7 @@ from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth.models import User, Permission
 
-from catalog.models import Author, Book, BookInstance, Genre, Language
+from hero.models import Author, Book, BookInstance, Genre, Language
 
 
 class AuthorListViewTest(TestCase):
@@ -23,7 +23,7 @@ class AuthorListViewTest(TestCase):
 
 
     def test_view_url_exists_at_desired_location(self):
-        response = self.client.get('/catalog/authors/')
+        response = self.client.get('/hero/authors/')
         self.assertEqual(response.status_code, 200)
 
     def test_view_url_accessible_by_name(self):
@@ -33,7 +33,7 @@ class AuthorListViewTest(TestCase):
     def test_view_uses_correct_template(self):
         response = self.client.get(reverse('authors'))
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'catalog/author_list.html')
+        self.assertTemplateUsed(response, 'hero/author_list.html')
 
     def test_pagination_is_ten(self):
         response = self.client.get(reverse('authors'))
@@ -93,7 +93,7 @@ class LoanedBookInstancesByUserListViewTest(TestCase):
 
     def test_redirect_if_not_logged_in(self):
         response = self.client.get(reverse('my-borrowed'))
-        self.assertRedirects(response, '/accounts/login/?next=/catalog/mybooks/')
+        self.assertRedirects(response, '/accounts/login/?next=/hero/mybooks/')
         
     def test_logged_in_uses_correct_template(self):
         login = self.client.login(username='testuser1', password='1X<ISRUkw+tuK')
@@ -105,7 +105,7 @@ class LoanedBookInstancesByUserListViewTest(TestCase):
         self.assertEqual(response.status_code, 200)
 
         # Check we used correct template
-        self.assertTemplateUsed(response, 'catalog/bookinstance_list_borrowed_user.html')
+        self.assertTemplateUsed(response, 'hero/bookinstance_list_borrowed_user.html')
 
     def test_only_borrowed_books_in_list(self):
         login = self.client.login(username='testuser1', password='1X<ISRUkw+tuK')
@@ -264,7 +264,7 @@ class RenewBookInstancesViewTest(TestCase):
         self.assertEqual(response.status_code, 200)
 
         # Check we used correct template
-        self.assertTemplateUsed(response, 'catalog/book_renew_librarian.html')    
+        self.assertTemplateUsed(response, 'hero/book_renew_librarian.html')    
 
     def test_form_renewal_date_initially_has_date_three_weeks_in_future(self):
         login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
@@ -324,4 +324,4 @@ class RenewBookInstancesViewTest(TestCase):
     #     self.assertEqual(response.status_code, 200)
 
     #     # Check we used correct template
-    #     self.assertTemplateUSed(response, 'catalog/book_renew_librarian.html')
+    #     self.assertTemplateUSed(response, 'hero/book_renew_librarian.html')
