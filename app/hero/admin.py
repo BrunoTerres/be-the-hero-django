@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Ong, Incidents
+from .models import Ngo, Incidents
 
-admin.site.register(Ong)
+admin.site.register(Ngo)
 admin.site.register(Incidents)

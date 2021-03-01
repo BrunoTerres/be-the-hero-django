@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="utf-8">
-  <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
+  {% block head-meta %}
+    <meta charset="utf-8" http-equiv="Content-Type" content="text/html; charset=utf-8">
+  {% endblock %}
+
+  {% block title %}
+    <title>Authentication</title>
+  {% endblock %}
+
+  {% load static %}
+  {% block style %}
+    <link href="{% static 'static/main.css'%}" rel="stylesheet" type="text/css" media="all">
+  {% endblock %}
 </head>
 <body>
   <main>
-    <h1>base</h1>
+    <h1 class='homebase'>base</h1>
     {% block content %}
     {% endblock %}
   </main>

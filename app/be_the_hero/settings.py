@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'hero',
+    'catalog',
 ]
 
 MIDDLEWARE = [
@@ -130,6 +131,10 @@ EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'tmp/email')
 
 STATIC_URL = "/staticfiles/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATICFILES_DIRS = [
+    '/app/authentication/static',
+    '/app/hero/static',
+]
 
 MEDIA_URL = "/mediafiles/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "mediafiles")

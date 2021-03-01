@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Ong Registration {% endblock %}
+
+{% block content %}
+<div>
+    <div>
+        <h1 style='font-weight: bold;'>Cadastro</h1>     
+        <p>Register, enter the platform and help people contact your NGO's cases.</p>
+        <p><a href="">I don't have register</a></p>
+    </div>
+    
+    <div>
+        <form method="POST" class="post-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Save</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
