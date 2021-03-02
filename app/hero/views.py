@@ -9,6 +9,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.decorators import login_required, permission_required
 #require login to class based view
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.core.files.storage import FileSystemStorage
 
 from hero.models import Incident, Ngo
 #from hero.forms import RenewBookForm
@@ -41,7 +42,7 @@ def image_upload(request):
         filename = fs.save(image_file.name, image_file)
         image_url = fs.url(filename)
         print(image_url)
-        return render(request, "upload.html", {
+        return render(request, "hero/upload.html", {
             "image_url": image_url
         })
     return render(request, "hero/upload.html")
