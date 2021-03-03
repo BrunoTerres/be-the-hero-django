@@ -1,42 +1,44 @@
 {% extends "base.html" %}
 
-{% block page_style %}
-  {% load static %}
-  <linK rel="stylesheet" href="{% static 'css/logon.css' %}">
+{% block static %}
+{% load static %}
+<linK rel="stylesheet" href="{% static 'css/logon.css' %}">
 {% endblock %}
 
 {% block content %}
-  
-  {% if form.errors %}
-    <p>Your username and password didn't match. Please try again.</p>
-  {% endif %}
-
-  {% if next %}
-    {% if user.is_authenticated %}
-      <p>Your account doesn't have access to this page. To proceed,
-      please login with an account that has access.</p>
-    {% else %}
-      <p>Please login to see this page.</p>
-    {% endif %}
-  {% endif %}
-
-  <form method="post" action="{% url 'login' %}">
-    {% csrf_token %}
-    <table>
-      <tr>
-        <td>{{ form.username.label_tag }}</td>
-        <td>{{ form.username }}</td>
-      </tr>
-      <tr>
-        <td>{{ form.password.label_tag }}</td>
-        <td>{{ form.password }}</td>
-      </tr>
-    </table>
-    <input type="submit" value="login" />
-    <input type="hidden" name="next" value="{{ next }}" />
-  </form>
-
-  {# Assumes you setup the password_reset view in your URLconf #}
-  <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+  <div class='container logon-container'>
+  <div class="row">
+    <div class="col-md-5">  
+        {% if form.errors %}
+          <p>Your username and password didn't match. Please try again.</p>
+        {% endif %}
+        <section class="form">
+          <h1> Login </h1>
+          <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <table>
+              <tr>
+                <td>{{ form.username.label_tag }}</td>
+                <td>{{ form.username }}</td>
+              </tr>
+              <tr>
+                <td>{{ form.password.label_tag }}</td>
+                <td>{{ form.password }}</td>
+              </tr>
+            </table>
+            <input class="button-login" type="submit" value="login" />
+            <input type="hidden" name="next" value="{{ next }}" />
+          </form>
+          {# Assumes you setup the password_reset view in your URLconf #}
+          <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+          <p><a href="{% url 'signup' %}">I don't have a registration</a></p>
+        </section>
+        </div>
+        
+        <div class="col-md-5">
+        <img class="login-img" src="/mediafiles/heroes.png" alt="Heroes" />
+        </div>
+      </div>
+  </div>
 
 {% endblock %}

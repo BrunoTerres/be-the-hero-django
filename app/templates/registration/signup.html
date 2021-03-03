@@ -1,17 +1,36 @@
-<h2>Sign up Form</h2>
-<form method="post">
-  {% csrf_token %}
-  {% for field in form %}
-    <p>
-      {{ field.label_tag }}<br>
-      {{ field }}
-      {% if field.help_text %}
-        <small style="color: grey">{{ field.help_text }}</small>
-      {% endif %}
-      {% for error in field.errors %}
-        <p style="color: red">{{ error }}</p>
+{% extends "base.html" %}
+
+{% block page_style %}
+  {% load static %}
+  <linK rel="stylesheet" href="{% static 'css/logon.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class=''>
+  <section class="form">
+    <img src='/mediafiles/logo_2mLetLB.svg' alt="Be The Hero" />
+    <h1> Sign Up </h1>
+
+    <h2>Sign up Form</h2>
+    <form method="post">
+      {% csrf_token %}
+      {% for field in form %}
+        <p>
+          {{ field.label_tag }}<br>
+          {{ field }}
+          {% if field.help_text %}
+            <small style="color: grey">{{ field.help_text }}</small>
+          {% endif %}
+          {% for error in field.errors %}
+            <p style="color: red">{{ error }}</p>
+          {% endfor %}
+        </p>
       {% endfor %}
-    </p>
-  {% endfor %}
-  <button type="submit">Sign up</button>
-</form>
+      <button type="submit">Sign up</button>
+    </form>
+    
+
+    <img src="/mediafiles/heroes.png" alt="Heroes" />
+    </section>
+<div>
+{% endblock %}

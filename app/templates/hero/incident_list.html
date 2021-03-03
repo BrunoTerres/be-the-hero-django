@@ -1,16 +1,44 @@
 {% extends "base.html" %}
 
+{% block static %}
+{% load static %}
+<linK rel="stylesheet" href="{% static 'css/incident_list.css' %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">    <link red="stylesheet" href="{% static 'js/jquery-3.3.1.slim.min.js' %}">
+
+{% endblock %}
+
 {% block content %}
-    <h1>Incident List</h1>
+
+<div class="container incident-container">    
+    <div class="row">
+        <h2 class="col-md-5 incident-list">Incident List</h2>     
+        <a class="button col-md-5" href="{% url 'hero:incident-create' %}">New Incident</a></button>
+    </div>
+
+
     {% if incident_list %}
-        <ul>
-            {% for incident in incident_list %}
-                <li>
-                    <a href="{{ incident.get_absolute_url }}">{{ incident.title }}</a> ({{ incident.ngo }})
-                </li>
+
+        <ul class="row">
+            {% for incident in incident_list %}        
+            
+                <li class="col-md-5">
+                    <strong>INCIDENT:</strong>
+                    <a href="{{ incident.get_absolute_url }}">{{ incident.title }}</a>
+                    <p>({{ incident.ngo }})</p> 
+                    <srong>DESCRIPTION</srong>
+                    <p>{{ incident.description }}</p>
+
+                    <strong>VALUE:</strong>
+                    <p>{{ incident.value }}</p>
+
+                    <td><a href="url:delete_view" part.id><i class="fa fa-trash"></i></a></td>          
+                </li>    
+
             {% endfor %}
         </ul>
+       
     {% else %}
         <p>There are no incidets in the library.</p>
     {% endif %}
+</div>
 {% endblock %}

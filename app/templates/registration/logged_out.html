@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
+{% block page_style %}
+  {% load static %}
+  <linK rel="stylesheet" href="{% static 'css/logon.css' %}">
+{% endblock %}
+
 {% block content %}
   <p>Logged out!</p>
   <a href="{% url 'login'%}">Click here to login again.</a>
