@@ -1,0 +1,165 @@
+{% comment %} <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Hyacinth 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20131010
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    {% block head-meta %}
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+    {% endblock %}
+
+    {% block title %}
+        <title>Bruno Terres</title>
+    {% endblock %}    
+
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+    <link href="default.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel='stylesheet' href="{% static 'pages.css' %}">
+
+</head>
+
+
+<body>
+    {% block content %}{% endblock %}
+</body>
+</html>
+             {% endcomment %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Hyacinth 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20131010
+-->
+
+<html>
+<head>
+
+    {% block head-meta %}
+         <meta charset="utf-8">
+         <!-- Add here the kaywords that describe the project -->
+         <meta name="keywords" content="portfolio, web dev, django">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% endblock %}
+    
+    {% block title %}
+        <title>Home</title>
+    {% endblock %}
+
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">    {% load static %}
+    <link rel="stylesheet" href="{% static 'pages.css' %}">
+    <link rel="stylesheet" href="{% static 'home.css' %}"> 
+
+</head> 
+<body>
+
+    {% block header %}
+
+    <div id="header-wrapper">
+        
+        <div id="header" class="container mmenu">
+            <div id="logo">
+                <h1><a href="{% url 'home:home' %}">Bruno Terres</a></h1>
+                <span>A Full Stack Web Developer</span>
+            </div>
+        
+            <div id="menu">
+                <ul>
+                    <li><a href="{% url 'home:tools' %}" accesskey="2" title="">Skills</a></li>
+                    <li><a href="#experience" accesskey="3" title="">Experience</a></li>
+                    <li><a href="{% url 'home:contact' %}" accesskey="3" title="" class="contact-btn">Contact</a></li>
+                    <li><a href="{% url 'home:bio' %}" accesskey="4" title="">About</a></li>
+                </ul>
+            </div>
+            
+            <div class="arrow-down">
+                <a href="#three-column" class="icon"><img class="img-responsive contact-img"src="{% static 'images/seta.png' %}" width="50px" height="50px" alt="whats app link"></a>                
+            </div>
+        
+        </div>
+
+
+        <div id="three-column" class="container">
+
+            <div>
+                <h2 id="welcome-to">Welcome to my site</h2>
+                <p> I'm a backend focused full stack web developer</p>
+            </div>
+
+            <div id="tbox1">
+                <span class="icon icon-wrench"></span>
+                <div class="title">
+                    <h2>Fast</h2>
+                </div>
+                <p>Fast Apps made with modern Web Frameworks.</p>
+                <a href="{% url 'home:fast' %}" class="button button-small">More</a>
+            </div>
+            <div id="tbox2">
+                <span class="icon icon-wrench"></span>
+                <div class="title">
+                    <h2>Safe</h2>
+                </div>
+                <p>Fast Apps made with modern Web Frameworks.</p>
+                <a href="{% url 'home:safe' %}" class="button button-small">More</a>
+            </div>
+
+            <div id="tbox3">
+                <span class="icon icon-wrench"></span>
+                <div class="title">
+                    <h2>Responsive</h2>
+                </div>
+                <p>Fast Apps made with modern Web Frameworks.</p>
+                <a href="{% url 'home:responsive' %}" class="button button-small">More</a>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
+
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+
+    {% block footer %}
+
+    <div class="wrapper4">
+        <div id="footer" class="container">
+            <div>
+                <header class="title">
+                    <h2>Get in touch</h2>
+                    <span class="byline">Find me on social medias</span> 
+                </header>
+			    <ul class="contact">
+				    <li><a href="#" class="icon icon-twitter"><img class="img-responsive contact-img"src="{% static 'images/linkedin.png' %}" width="50px" height="50px" alt="linkedin link">
+				    <li><a href="#" class="icon icon-facebook"><img class="img-responsive contact-img"src="{% static 'images/github.png' %}" width="50px" height="50px" alt="github link"></a></li>
+				    <li><a href="#" class="icon icon-dribbble"><img class="img-responsive contact-img"src="{% static 'images/messager.png' %}" width="50px" height="50px" alt="messager link"></a></li>
+				    <li><a href="#" class="icon icon-tumblr"><img class="img-responsive contact-img"src="{% static 'images/whats.png' %}" width="50px" height="50px" alt="whats app link"></a></li></a></li>
+			    </ul>
+		    </div>
+	    </div>
+    </div>
+
+    <div id="copyright" class="container">
+    	<p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+    </div>
+
+    {% endblock %}
+</body>
+
+</html> 

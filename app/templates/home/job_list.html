@@ -1,0 +1,18 @@
+{% extends "base_pages.html" %}
+
+{% block content %}
+
+    <h1>Job List</h1>
+        {% if job_list %}
+            <ul>
+                {% for job in job_list %}
+                    <li>
+                        <a href="{{ job.get_absolute_url }}">{{ job.name }}</a>
+                    </li>   
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>There are no Jobs in the Portfolio.</p>
+        {% endif %}
+
+{% endblock %}

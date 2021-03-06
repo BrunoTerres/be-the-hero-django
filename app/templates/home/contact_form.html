@@ -1,0 +1,45 @@
+{% extends "base_pages.html" %}
+
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+    
+    <div class="container">
+    
+        <div class="form-box row justify-content-center">
+            <div class="col-6 contact-text">
+                <h1>Want to build an awesome Web Site?</h1>
+                <h3> Or find me there</h3>
+                <img class="img-responsive contact-img"src="{% static 'images/linkedin.png' %}" width="50px" height="50px" alt="linkedin link">
+                <img class="img-responsive contact-img"src="{% static 'images/github.png' %}" width="50px" height="50px" alt="github link">
+                <img class="img-responsive contact-img"src="{% static 'images/messager.png' %}" width="50px" height="50px" alt="messager link">
+                <img class="img-responsive contact-img"src="{% static 'images/whats.png' %}" width="50px" height="50px" alt="whats app link">
+            </div>
+            <div class="col-6">
+                <h3 class="mt-2 form-title">Get in touch</h3>
+                <hr class="mt-0 mb-4">
+
+                <div class="form">
+                    <form method="POST" action="{% url 'contact' %}">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-6">
+                                {{ form.first_name | as_crispy_field }}
+                            </div>
+                            <div class="col-6">
+                                {{ form.last_name | as_crispy_field }} 
+                            </div>
+                        </div>
+                        {{ form.email | as_crispy_field }}
+                        {{ form.message | as_crispy_field }}
+                        <button type="submit" class="btn btn-success">SEND</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base_home.html' %}
+
+{% block content %}
+
+  {% load static %}
+
+    <div id="wrapper3">
+        <div id="portfolio" class="container">
+
+            <div class="title">
+                <h1 id="experience"  class="byline">Experience</h1>
+            </div>
+
+            <div class="row ">
+            
+              {% for job in jobs %}
+
+                <div class="col column">
+                  <div class="box">
+                    <a href="{{ job.get_absolute_url }}">
+                      <img src="{% static 'images/'|add:job.name|add:'.png' %}"  width="160" height="160" alt="job logo" >
+                    </a>
+                    <h3 class="job-title">{{ job.name }}</h3>
+                    <p class="job-description">{{ job.short_description }}</p>
+                    <a href="{{ job.get_absolute_url }}" class="button button-small">More</a>
+                  </div>
+                </div>
+            
+              {% endfor %}
+            
+            </div>
+        </div>  
+    </div>  
+    
+{% endblock %}
+
+
+

@@ -1,0 +1,22 @@
+{% extends "base_pages.html" %}
+
+{% block content %}
+{% load static %}
+    <h1>Tool List</h1>
+        {% if tool_list %}
+            <div class="row">
+                {% for tool in tool_list %}
+                    <div class="col">
+                        <img class="tool-img" src="{% static 'images/'|add:tool.name|add:'.png' %}" width="70px" height="70px">
+                        <h3>
+                            <a href="{{ job.get_absolute_url }}">{{ job.name }}</a>
+                        </h3>
+                        <p> {{ tool.description }}</p>                       
+                    </div>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>There are no Tools in the Portfolio.</p>
+        {% endif %}
+
+{% endblock %}
