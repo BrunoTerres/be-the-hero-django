@@ -1,0 +1,134 @@
+Jobs:
+        Safe Place:
+                Desenvolvido para facilitar e aumentar a seguranca no embiente de trabalho em tempos de pandemia 
+                como a do covid-19, fazendo uso de um modelo de rede neural treinado para detectar faces e monitorar o uso correto de mascaras de protecao, 
+                alem de acompanhar o distanciamento social. 
+
+                Seu backend faz uso de tecnologias como TensorFlow para otreinamento da rede neural, Tornado (Python) em conjunto com SQLAlchemy funcionando como 
+                server-side e ORM para acesso e manipulacao de dados, PostgreSQL como gerenciador de banco de dados.
+
+                Front-end usa principalmente Vue.JS para criar paginas dinamicas ao lado do HTML e CSS em conjunto com o Bootstrap.
+
+
+        Be the Hero:
+                Uma adaptação baseada em Django da aplicação Be The Hero, desenvolvida no 11º edição da semana OmniStack 
+                desenvolvida pela Rocketseat. Originalmente feito inteiramente com as bibliotecas JavaScript React e React Native em contjunto com Node.js 
+                e um banco de dados SQLite, nesta versão faço uso de uma Stack Python, com o framework Django como backend em conjunto com Gunicord e Nginx para servir
+                as Templates HTML e os aquivos estaticos, além de um banco de dados PostgreSQL.
+
+                Be The Hero (django version)
+                Aplicação para conectar ONGs e outras instituições a pessoas que tem disponibilidade para ajudar
+
+        Blog Page:
+                Originalmente desenvolvido para publicação de noticias sobre Engenharia e tecnologias relacionadas, 
+                este Web App funciona como um blog generico que aceita publicações, comentários e filtro por categoria.
+
+
+
+Technologies:
+
+    Django: 
+            Django is a Python-based free and open-source web framework that follows the model-template-views (MTV) architectural pattern.
+            It is maintained by the Django Software Foundation (DSF).
+
+            Django's primary goal is to ease the creation of complex, database-driven websites. 
+            The framework emphasizes reusability and "pluggability" of components, less code, 
+            low coupling, rapid development, and the principle of don't repeat yourself.
+            Python is used throughout, even for settings, files, and data models.
+            Django also provides an optional administrative create, read, 
+            update and delete interface that is generated dynamically through 
+            introspection and configured via admin models. 
+
+    Flask:  
+            Flask is a micro web framework written in Python.
+            It is classified as a microframework because it does not require particular tools or libraries.
+            It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions. 
+            However, Flask supports extensions that can add application features as if they were implemented in Flask itself. 
+            Extensions exist for object-relational mappers, form validation, upload handling,
+            various open authentication technologies and several common framework related tools.
+
+    Tornado:
+            Tornado is a scalable, non-blocking web server and web application framework written in Python.
+            It is noted for its high performance. Its design enables handling a large number of concurrent connections
+    
+    SQLAlchemy:
+            SQLAlchemy is an open-source SQL toolkit and object-relational mapper (ORM) for the Python programming language released under the MIT License.
+            SQLAlchemy's philosophy is that relational databases behave less like object collections as the scale gets larger and performance starts being a concern, 
+            while object collections behave less like tables and rows as more abstraction is designed into them.
+   
+    Vue.JS: 
+            Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications.
+
+
+    Bootstrap:
+            Bootstrap is a free and open-source CSS framework directed at responsive, 
+            mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography,
+            forms, buttons, navigation, and other interface components. 
+
+    Docker:
+            Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. 
+            Containers are isolated from one another and bundle their own software, libraries and configuration files;
+            they can communicate with each other through well-defined channels. 
+            Because all of the containers share the services of a single operating system kernel, 
+            they use fewer resources than virtual machines.
+
+    Cloud Computing:
+            Cloud computing is the on-demand availability of computer system resources, 
+            especially data storage (cloud storage) and computing power, without direct active management by the user. 
+            The term is generally used to describe data centers available to many users over the Internet. 
+            Large clouds, predominant today, often have functions distributed over multiple locations from central servers. 
+            If the connection to the user is relatively close, it may be designated an edge server. 
+
+
+    TensorFlow:
+            TensorFlow is a free and open-source software library for machine learning.
+            It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks.
+
+            It is a symbolic math library based on dataflow and differentiable programming. 
+            It is used for both research and production at Google
+
+
+Languages:
+
+    Python: 
+            Python is an interpreted, high-level and general-purpose programming language.
+
+            Python's design philosophy emphasizes code readability with its notable use of significant indentation. 
+            Its language constructs and object-oriented approach aim to help programmers write clear,
+            logical code for small and large-scale projects.
+            Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms,
+            including structured (particularly, procedural), object-oriented and functional programming. 
+            Python is often described as a "batteries included" language due to its comprehensive standard library.
+
+
+    JavaScript: 
+            JavaScript is high-level, often just-in-time compiled, and multi-paradigm.
+
+            Often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.  
+            It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions. 
+            Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web. 
+            JavaScript enables interactive web pages and is an essential part of web applications.
+            The vast majority of websites use it for client-side page behavior,
+            and all major web browsers have a dedicated JavaScript engine to execute it.
+
+            As a multi-paradigm language, JavaScript supports event-driven, functional, and imperative programming styles. 
+            It has application programming interfaces (APIs) for working with text, dates, regular expressions,
+            standard data structures, and the Document Object Model (DOM). 
+
+    
+    SQL:    
+            Structured Query Language is a domain-specific language used in programming and designed for managing data 
+            
+            held in a relational database management system (RDBMS), 
+            or for stream processing in a relational data stream management system (RDSMS).
+            It is particularly useful in handling structured data.
+
+    
+    HTML:   
+            Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. 
+            It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript. 
+
+    
+    CSS:    
+            Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. 
+            It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript. 
