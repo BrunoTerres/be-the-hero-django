@@ -1,5 +1,14 @@
 Jobs:
         Safe Place:
+                Developed to facilitate and increase safety in the workplace in times of a pandemic like the covid-19, making use of a trained neural network model to detect faces and monitor the correct use of protective masks,
+                in addition to monitoring social distance.
+
+                Its backend makes use of technologies such as TensorFlow for training the neural network, Tornado (Python) together with SQLAlchemy working as
+                server-side and ORM for data access and manipulation, PostgreSQL as a database manager.
+
+                Front-end mainly uses Vue.JS to create dynamic pages alongside HTML and CSS in conjunction with Bootstrap.
+
+
                 Desenvolvido para facilitar e aumentar a seguranca no embiente de trabalho em tempos de pandemia 
                 como a do covid-19, fazendo uso de um modelo de rede neural treinado para detectar faces e monitorar o uso correto de mascaras de protecao, 
                 alem de acompanhar o distanciamento social. 
@@ -11,19 +20,33 @@ Jobs:
 
 
         Be the Hero:
+                A Django-based adaptation of the Be The Hero application, taught at the 11th edition of the week OmniStack
+                Developed by Rocketseat. Originally done entirely with the JavaScript libraries React and React Native in conjunction with Node.js
+                and an SQLite database.
+                At this version I use a Python Stack, with the Django framework as a backend together with Gunicorn and Nginx to serve
+                HTML templates and statistical files, as well as a PostgreSQL database.
+
+                Be The Hero (django version)
+                Application to connect NGOs and other institutions to people who are available to help
+
+
                 Uma adaptação baseada em Django da aplicação Be The Hero, desenvolvida no 11º edição da semana OmniStack 
                 desenvolvida pela Rocketseat. Originalmente feito inteiramente com as bibliotecas JavaScript React e React Native em contjunto com Node.js 
-                e um banco de dados SQLite, nesta versão faço uso de uma Stack Python, com o framework Django como backend em conjunto com Gunicord e Nginx para servir
+                e um banco de dados SQLite, nesta versão faoço uso de uma Stack Python, com o framework Django como backend em conjunto com Gunicord e Nginx para servir
                 as Templates HTML e os aquivos estaticos, além de um banco de dados PostgreSQL.
 
                 Be The Hero (django version)
                 Aplicação para conectar ONGs e outras instituições a pessoas que tem disponibilidade para ajudar
 
         Blog Page:
+
+                Originally developed for publishing news about Engineering and related technologies,
+                this Web App works as a generic blog that accepts publications, comments and filter by category.
+                
                 Originalmente desenvolvido para publicação de noticias sobre Engenharia e tecnologias relacionadas, 
                 este Web App funciona como um blog generico que aceita publicações, comentários e filtro por categoria.
 
-
+        
 
 Technologies:
 

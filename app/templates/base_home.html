@@ -86,12 +86,11 @@ Released   : 20131010
                     <li><a href="{% url 'home:contact' %}" accesskey="3" title="" class="contact-btn">Contact</a></li>
                     <li><a href="{% url 'home:bio' %}" accesskey="4" title="">About</a></li>
                 </ul>
+
             </div>
-            
-            <div class="arrow-down">
-                <a href="#three-column" class="icon"><img class="img-responsive contact-img"src="{% static 'images/seta.png' %}" width="50px" height="50px" alt="whats app link"></a>                
-            </div>
-        
+            <ul class="actions arrow-down">
+                <a href="#three-column" class="icon"><img class="img-responsive contact-img"src="/mediafiles/down-arrow.svg" width="50px" height="50px" alt="whats app link"></a>                
+            </ul>
         </div>
 
 
@@ -99,11 +98,11 @@ Released   : 20131010
 
             <div>
                 <h2 id="welcome-to">Welcome to my site</h2>
-                <p> I'm a backend focused full stack web developer</p>
+                <p>A backend focused full stack web developer</p>
             </div>
 
             <div id="tbox1">
-                <span class="icon icon-wrench"></span>
+                <span class="icon icon-wrench"><img src='/mediafiles/lighting.svg' alt="Cloud Computing" width="100" height="100"/></span>
                 <div class="title">
                     <h2>Fast</h2>
                 </div>
@@ -111,7 +110,7 @@ Released   : 20131010
                 <a href="{% url 'home:fast' %}" class="button button-small">More</a>
             </div>
             <div id="tbox2">
-                <span class="icon icon-wrench"></span>
+                <span class="icon icon-wrench"><img src='/mediafiles/shield.svg' alt="Safe" width="100" height="100"/></span>
                 <div class="title">
                     <h2>Safe</h2>
                 </div>
@@ -120,11 +119,11 @@ Released   : 20131010
             </div>
 
             <div id="tbox3">
-                <span class="icon icon-wrench"></span>
+                <span class="icon icon-wrench"><img src='/mediafiles/cloud-computing.svg' alt="Cloud Computing" width="100" height="100"/></span>
                 <div class="title">
-                    <h2>Responsive</h2>
+                    <h2>Available</h2>
                 </div>
-                <p>Fast Apps made with modern Web Frameworks.</p>
+                <p>Cloud based servers that makes your Web App Highly available worldwide!</p>
                 <a href="{% url 'home:responsive' %}" class="button button-small">More</a>
             </div>
         </div>
@@ -133,7 +132,57 @@ Released   : 20131010
     {% endblock %}
 
     <div>
-        {% block content %}{% endblock %}
+        <div id="wrapper3">
+            <div id="portfolio" class="container">
+    
+                <div class="title">
+                    <h1 id="experience"  class="byline">Experience</h1>
+                </div>
+    
+                <div class="row ">
+    
+                    <div class="col column">
+                      <div class="box">
+
+                        <a href="http://localhost:8000/hero">
+                            <img src='/mediafiles/logo_2mLetLB.svg' alt="Be The Hero" width="100" height="100"/>
+                        </a>
+
+                        <h3 class="job-title">Be The Hero</h3>
+                        <p class="job-description">Application to connect NGOs and other institutions to people who are available to help.</p>
+                        <a href="http://localhost:8000/hero" class="button button-small">More</a>
+                      </div>
+                    </div>
+
+                    <div class="col column">
+                        <div class="box">
+  
+                          <a href="http://localhost:8000/blog">
+                              <img src='/mediafiles/blog.jpeg' alt="Blog" width="100" height="100"/>
+                          </a>
+  
+                          <h3 class="job-title">Generic Blog</h3>
+                          <p class="job-description">A generic Blog Web App that receive Posts and Comments.</p>
+                          <a href="http://localhost:8000/blog" class="button button-small">More</a>
+                        </div>
+                      </div>
+
+                      <div class="col column">
+                        <div class="box">
+  
+                          <a href="">
+                              <img src='/mediafiles/safeplace.png' alt="Safe Place" width="100" height="100"/>
+                          </a>
+  
+                          <h3 class="job-title">Safe place</h3>
+                          <p class="job-description">A Web App developed to make shared environments safer in Covid-19 pandemic times.</p>
+                          <a href="" class="button button-small">More</a>
+                        </div>
+                      </div>
+                
+                </div>
+            </div>  
+        </div>  
     </div>
 
     {% block footer %}
@@ -143,13 +192,13 @@ Released   : 20131010
             <div>
                 <header class="title">
                     <h2>Get in touch</h2>
-                    <span class="byline">Find me on social medias</span> 
+                    <span class="byline">Let's build something great together!</span> 
                 </header>
-			    <ul class="contact">
-				    <li><a href="#" class="icon icon-twitter"><img class="img-responsive contact-img"src="{% static 'images/linkedin.png' %}" width="50px" height="50px" alt="linkedin link">
-				    <li><a href="#" class="icon icon-facebook"><img class="img-responsive contact-img"src="{% static 'images/github.png' %}" width="50px" height="50px" alt="github link"></a></li>
-				    <li><a href="#" class="icon icon-dribbble"><img class="img-responsive contact-img"src="{% static 'images/messager.png' %}" width="50px" height="50px" alt="messager link"></a></li>
-				    <li><a href="#" class="icon icon-tumblr"><img class="img-responsive contact-img"src="{% static 'images/whats.png' %}" width="50px" height="50px" alt="whats app link"></a></li></a></li>
+			    <ul class="contact row">
+				    <li class="col-md-3"><a href="#" class="icon icon-twitter"><img class="img-responsive contact-img"src="/mediafiles/github(1).svg" width="50px" height="50px" alt="linkedin link">
+				    <li class="col-md-3" ><a href="#" class="icon icon-facebook"><img class="img-responsive contact-img"src="/mediafiles/gmail(1).svg" width="50px" height="50px" alt="github link"></a></li>
+				    <li class="col-md-3"><a href="#" class="icon icon-dribbble"><img class="img-responsive contact-img"src="/mediafiles/linkedin(1).svg" width="50px" height="50px" alt="messager link"></a></li>
+				    <li class="col-md-3"><a href="#" class="icon icon-tumblr"><img class="img-responsive contact-img"src="/mediafiles/whatsapp.svg" width="50px" height="50px" alt="whats app link"></a></li></a></li>
 			    </ul>
 		    </div>
 	    </div>

@@ -92,6 +92,12 @@ body {
   padding: 3em;
 } 
 
+.contact {
+  position: relative;
+  left: 130px;
+  width: 80%;
+}
+
 .contact-img {
   margin: 1em;
 } 
