@@ -5,7 +5,7 @@ html, body {
 body {
     margin: 0px;
     padding: 0px;
-    background: #8C16C3 url(images/img02.png) repeat;
+    background:black url(/mediafiles/img02.png) repeat;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 12pt;
 	font-weight: 400;
@@ -389,10 +389,11 @@ a:hover {
 
 #three-column .icon
 {
+
     position: relative;
     display: block;
-    margin: 0px auto 0.80em auto;
-    background: none;
+    margin:  auto;
+    background: white;
     line-height: 150px;
     font-size: 4em;
     width: 150px;
@@ -416,6 +417,7 @@ a:hover {
 
 #three-column .title
 {
+    margin: 1.5em;
     letter-spacing: 0.10em;
     text-align: center;
     text-transform: uppercase;
@@ -440,4 +442,3 @@ a:hover {
 {
     border-top-color: #292929;
 }
-

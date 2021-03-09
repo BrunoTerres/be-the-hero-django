@@ -17,4 +17,7 @@ urlpatterns = [
     path('language/<int:pk>', views.LanguageDetailView.as_view(), name='language_detail'),
     path('contact/', views.ContactCreateView.as_view(), name='contact'),
     path('upload', views.image_upload, name="upload"),
+    path('newtools/', views.tools, name='newtools'), 
+    path('newlanguages/', views.languages, name='newlanguages'),
+
 ]   

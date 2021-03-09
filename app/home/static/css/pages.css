@@ -112,11 +112,12 @@ body {
 }
 
 .about-title {
-  color: white;
+  color: black;
 }
 
 .about-text {
-  color: white;
+  color: darkgray;
+  font-size: 1.25em;
 }
 
 .first {

@@ -1,0 +1,130 @@
+{% extends "base_pages.html" %}
+
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/tool.css' %}"> 
+{% endblock %}
+
+{% block content %}
+
+<div class="container tool-container">
+    <div class="row tool-card">
+        <div class="col-md-4 tool-image">
+            <img src="/mediafiles/django.png" alt="Django" width="200" height="200">
+        </div>
+        <div class="col-md-7 tool-sub-box">
+            <h3 class="tool-title">Django</h3>
+            <p class="tool-text">Django is a Python-based free and open-source web framework that follows the model-template-views (MTV) architectural pattern.
+               It is maintained by the Django Software Foundation (DSF).
+            
+               Django's primary goal is to ease the creation of complex, database-driven websites. 
+               The framework emphasizes reusability and "pluggability" of components, less code, 
+               low coupling, rapid development, and the principle of don't repeat yourself.
+               Python is used throughout, even for settings, files, and data models.
+               Django also provides an optional administrative create, read, 
+               update and delete interface that is generated dynamically through 
+               introspection and configured via admin models. </p>
+        </div>
+    </div>
+    <div class="row tool-card">
+        <div class="col-md-7 tool-sub-box">
+            <h3 class="tool-title">Flask</h3>
+            <p class="tool-text">
+                Flask is a micro web framework written in Python.
+                It is classified as a microframework because it does not require particular tools or libraries.
+                It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions. 
+                However, Flask supports extensions that can add application features as if they were implemented in Flask itself. 
+                Extensions exist for object-relational mappers, form validation, upload handling,
+                various open authentication technologies and several common framework related tools.
+            </p>
+        </div>
+        <div class="col-md-4 tool-image">
+            <img src="/mediafiles/flask.png" alt="Flask" width="200" height="200">
+        </div>
+    </div>
+
+    <div class="row tool-card">
+        <div class="col-md-4 tool-image">
+            <img src="/mediafiles/tornado.jpg" alt="tornado" width="200" height="200">
+        </div>
+        <div class="col-md-7 tool-sub-box">
+            <h3 class="tool-title">Tornado Web Server</h3>
+            <p class="tool-text">
+                Tornado is a scalable, non-blocking web server and web application framework written in Python.
+                It is noted for its high performance. Its design enables handling a large number of concurrent connections
+            </p>
+        </div>
+    </div>
+
+    <div class="row tool-card">
+        <div class="col-md-7 tool-sub-box">
+            <h3 class="tool-title">Cloud Computing</h3>
+            <p class="tool-text">
+                Cloud computing is the on-demand availability of computer system resources, 
+                especially data storage (cloud storage) and computing power, without direct active management by the user. 
+                The term is generally used to describe data centers available to many users over the Internet. 
+                Large clouds, predominant today, often have functions distributed over multiple locations from central servers. 
+                If the connection to the user is relatively close, it may be designated an edge server. 
+            </p>
+        </div>
+        <div class="col-md-4 tool-image">
+            <img src="/mediafiles/cloud.jpeg" alt="cloud" width="200" height="200">
+        </div>
+    </div>
+
+    <div class="row tool-card">
+        <div class="col-md-4 tool-image">
+            <img src="/mediafiles/bootstrap.jpeg" alt="bootstrap" width="200" height="200">
+        </div>
+        <div class="col-md-7 tool-sub-box">
+            <h3 class="tool-title">Bootstrap</h3>
+            <p class="tool-text">
+                Bootstrap is a free and open-source CSS framework directed at responsive, 
+                mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography,
+                forms, buttons, navigation, and other interface components. 
+            </p>
+        </div>
+    </div>
+    <div class="row tool-card">
+        <div class="col-md-7 tool-sub-box">
+            <h3 class="tool-title">Vue.JS</h3>
+            <p class="tool-text">
+                Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications.
+            </p>
+        </div>
+        <div class="col-md-4 tool-image">
+            <img src="/mediafiles/vue.png" alt="vue.js" width="200" height="200">
+        </div>
+    </div>
+
+    <div class="row tool-card">
+        <div class="col-md-4 tool-image">
+            <img src="/mediafiles/sqlalchemy.jpeg" alt="sqlalchemy" width="200" height="200">
+        </div>
+        <div class="col-md-7 tool-sub-box">
+            <h3 class="tool-title">SQLAlchemy</h3>
+            <p class="tool-text">
+                SQLAlchemy is an open-source SQL toolkit and object-relational mapper (ORM) for the Python programming language released under the MIT License.
+                SQLAlchemy's philosophy is that relational databases behave less like object collections as the scale gets larger and performance starts being a concern, 
+                while object collections behave less like tables and rows as more abstraction is designed into them.
+            </p>
+        </div>
+    </div>   
+    <div class="row tool-card">
+        <div class="col-md-7 tool-sub-box">
+            <h3 class="tool-title">Docker</h3>
+            <p class="tool-text">           
+                Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. 
+                Containers are isolated from one another and bundle their own software, libraries and configuration files;
+                they can communicate with each other through well-defined channels. 
+                Because all of the containers share the services of a single operating system kernel, 
+                they use fewer resources than virtual machines.
+            </p>
+        </div>
+        <div class="col-md-4 tool-image">
+            <img src="/mediafiles/docker.png" alt="docker" width="200" height="200">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

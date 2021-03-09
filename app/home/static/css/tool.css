@@ -1,0 +1,29 @@
+.tool-container {
+    margin-top: 3em;
+    margin-left: 10em;
+    margin-right: 8em;
+}
+
+.tool-card {
+    padding: 2em;
+    margin-bottom: 3em;
+    background-color: white;
+    border-radius: 1%;
+    max-width: 90%;
+}
+
+.tool-image {
+    margin: auto;
+}
+
+.tool-sub-box {
+
+}
+
+.tool-title {
+
+}
+
+.tool-text {
+
+}

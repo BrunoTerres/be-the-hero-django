@@ -33,6 +33,17 @@ def index(request):
 
         return render(request, 'home/index.html', context)        
 
+def tools(request):
+
+    return render(request, 'home/tools.html')
+
+
+def languages(request):
+
+    return render(request, 'home/languages.html')
+
+
+
 class BioView(generic.TemplateView):
     template_name = "home/bio.html"
 

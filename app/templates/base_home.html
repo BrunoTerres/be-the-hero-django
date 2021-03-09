@@ -1,39 +1,3 @@
-{% comment %} <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by TEMPLATED
-http://templated.co
-Released for free under the Creative Commons Attribution License
-
-Name       : Hyacinth 
-Description: A two-column, fixed-width design with dark color scheme.
-Version    : 1.0
-Released   : 20131010
--->
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    {% block head-meta %}
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="keywords" content="" />
-        <meta name="description" content="" />
-    {% endblock %}
-
-    {% block title %}
-        <title>Bruno Terres</title>
-    {% endblock %}    
-
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
-    <link href="default.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel='stylesheet' href="{% static 'pages.css' %}">
-
-</head>
-
-
-<body>
-    {% block content %}{% endblock %}
-</body>
-</html>
-             {% endcomment %}
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
 Design by TEMPLATED
@@ -61,11 +25,14 @@ Released   : 20131010
         <title>Home</title>
     {% endblock %}
 
+
     {% load static %}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">    {% load static %}
-    <link rel="stylesheet" href="{% static 'pages.css' %}">
-    <link rel="stylesheet" href="{% static 'home.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/pages.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}"> 
+    {% block style %}
 
+    {% endblock %}
 </head> 
 <body>
 
@@ -81,7 +48,7 @@ Released   : 20131010
         
             <div id="menu">
                 <ul>
-                    <li><a href="{% url 'home:tools' %}" accesskey="2" title="">Skills</a></li>
+                    <li><a href="{% url 'home:tools' %}" accesskey="2" title="">Tools</a></li>
                     <li><a href="#experience" accesskey="3" title="">Experience</a></li>
                     <li><a href="{% url 'home:contact' %}" accesskey="3" title="" class="contact-btn">Contact</a></li>
                     <li><a href="{% url 'home:bio' %}" accesskey="4" title="">About</a></li>
@@ -102,29 +69,32 @@ Released   : 20131010
             </div>
 
             <div id="tbox1">
-                <span class="icon icon-wrench"><img src='/mediafiles/lighting.svg' alt="Cloud Computing" width="100" height="100"/></span>
+                <div class="icon icon-wrench atribute-img">
+                    <img src='/mediafiles/lighting.svg' alt="Fast" width="100" height="100"/>
+                </div>
                 <div class="title">
                     <h2>Fast</h2>
                 </div>
-                <p>Fast Apps made with modern Web Frameworks.</p>
                 <a href="{% url 'home:fast' %}" class="button button-small">More</a>
             </div>
             <div id="tbox2">
-                <span class="icon icon-wrench"><img src='/mediafiles/shield.svg' alt="Safe" width="100" height="100"/></span>
-                <div class="title">
-                    <h2>Safe</h2>
+                <div class="icon icon-wrench atribute-img">
+                    <img src='/mediafiles/cloud-computing.svg' alt="Cloud Computing" width="100" height="100"/>
                 </div>
-                <p>Fast Apps made with modern Web Frameworks.</p>
-                <a href="{% url 'home:safe' %}" class="button button-small">More</a>
-            </div>
-
-            <div id="tbox3">
-                <span class="icon icon-wrench"><img src='/mediafiles/cloud-computing.svg' alt="Cloud Computing" width="100" height="100"/></span>
                 <div class="title">
                     <h2>Available</h2>
                 </div>
-                <p>Cloud based servers that makes your Web App Highly available worldwide!</p>
                 <a href="{% url 'home:responsive' %}" class="button button-small">More</a>
+            </div>
+
+            <div id="tbox3">
+                <div class="icon icon-wrench atribute-img">
+                    <img src='/mediafiles/shield.svg' alt="Safe" width="100" height="100"/>
+                </div>
+                <div class="title">
+                    <h2>Safe</h2>
+                </div>
+                <a href="{% url 'home:safe' %}" class="button button-small">More</a>
             </div>
         </div>
     </div>
@@ -205,6 +175,8 @@ Released   : 20131010
     </div>
 
     <div id="copyright" class="container">
+
+        <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     	<p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
     </div>
 
