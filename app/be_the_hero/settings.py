@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'hero',
     'home',
     'blog',
-    'crispy_forms'
+    'crispy_forms',
+    'comment',
 ]
 
 MIDDLEWARE = [
@@ -126,7 +127,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-LOGIN_REDIRECT_URL = '/hero'
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'login'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 

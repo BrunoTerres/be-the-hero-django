@@ -1,27 +1,50 @@
+import datetime
+
+from django.shortcuts import redirect
 from django.shortcuts import render
 from django.views import generic 
 from blog.models import Post, Category
 
+from .forms import PostForm
 
 def index(request):
 
     try:
         category = Category.objects.all()
+        post = Post.objects.all()
     except:
-        return render(request, 'info_missing.html')
+        return render(request, 'blog/info_missing.html')
     else:
         context = {
-            'categories': category
+            'categories': category,
+            'posts': post,
+
         }
 
     return render(request, 'blog/index.html', context)
 
+
+def post_new(request):
+     if request.method == "POST":
+         form = PostForm(request.POST)
+         if form.is_valid():
+             post = form.save(commit=False)
+             post.author = request.user
+             post.published_date =  datetime.datetime.now()
+             post.save()
+             return redirect('blog:post', pk=post.pk)
+     else:
+         form = PostForm()
+     return render(request, 'blog/post_edit.html', {'form': form})
+
+
 class PostListView(generic.ListView):
     context_object_name = 'post_list'
-    template_name = 'post_list.html'
+    template_name = 'blog/post_list.html'
     paginate_by = '4'
+
     def get_queryset(self):
-        return Post.objects.all()
+        return Post.objects.order_by('-created')
     
     def get_context_data(self, **kwargs):
         context=super(PostListView, self).get_context_data(**kwargs)

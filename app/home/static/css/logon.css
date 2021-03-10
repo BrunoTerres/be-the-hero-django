@@ -1,0 +1,51 @@
+.logon-container {
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logon-container section.form {
+  width: 100%;
+  max-width: 350px;
+}
+
+.logon-container section.form form {
+  margin-top: 100px;
+}
+
+.logon-container section.form form h1 {
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+.login-img {
+  position: relative;
+  margin-left: 10%;
+}
+.login-app-container {
+  position: relative;
+  margin-left: 5em;
+  align-items: center;
+}
+.login-app-button {
+  position: relative;
+  padding: 25px;
+  background: lightgray;
+  width: 450px;
+  height: 150px;
+  margin: 2em;
+  margin-top: 0.5em;
+}
+.login-img-button {
+  margin:  auto;
+}
+.job-title {
+  margin: auto;
+  margin-top: 1em;
+  color: green;
+}
+
+a { 
+  text-decoration: none; 
+}

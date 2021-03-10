@@ -19,5 +19,4 @@ urlpatterns = [
     #path('upload', views.image_upload, name="upload"),
     path('tools/', views.tools, name='tools'), 
     path('languages/', views.languages, name='languages'),
-
 ]   

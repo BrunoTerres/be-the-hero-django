@@ -25,6 +25,8 @@ urlpatterns = [
     path('blog/', include('blog.urls', namespace='blog')),
     path('admin/', admin.site.urls),
     path('auth/', include('authentication.urls')),
+    path('comment/', include('comment.urls')),
+
 ]
 
 if bool(settings.DEBUG):

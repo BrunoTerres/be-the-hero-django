@@ -1,20 +1,28 @@
-{% extends 'index.html' %}
+{% extends 'blog/index.html' %}
 
 {% block content_post %}
+    
+    {% if user.is_authenticated %}
+    <a href="{% url 'blog:post_new' %}" class="top-menu">
+        <img src="/mediafiles/plus.svg" alt="New Post" width="50" height="50">
+    </a>
+    {% endif %}
+
     {% for post in post_list %}
 
+    <div class="post-container">
         <h2 class="title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
         <p class="meta">Postado em {{ post.post_date }}
             &nbsp;&bull;&nbsp; <a href="#" class="comments">Comments (64)</a> &nbsp;&bull;&nbsp; <a href="#" class="permalink">{{ post.category }}</a></p>
         <div class="entry"> <a href="#" class="image image-full"><img src="images/pics01.jpg" alt="" /></a>
             <p> {{ post.text_body|slice:300 }}... </p>
         </div>
-        <div>
+        <div class="post-button">
             <button type="button" class="button">Leia Mais</button>
         </div>
 
-        <div>
-        </div>
+        <hr  WIDTH=85% ALIGN=left NOSHADE>
+    </div>
 
     {% endfor %}
 {% endblock %}

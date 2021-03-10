@@ -426,3 +426,12 @@ img.aligncenter {
 #footer a {
 	color: #8F8F8F;
 }
+
+.post-container {
+	padding: 1em;
+}
+
+.post-button {
+	position: relative;
+	margin-bottom: 1.5em;
+}

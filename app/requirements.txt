@@ -4,3 +4,4 @@ gunicorn==20.0.4
 Pillow==7.0
 Requests==2.25.1
 django-crispy-forms
+django-comments-dab

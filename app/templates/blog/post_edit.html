@@ -1,0 +1,18 @@
+{% extends 'blog/index.html' %}
+
+{% block content_post %}
+    
+    {% if user.is_authenticated %}
+    <a href="{% url 'blog:home' %}">
+        <img src="/mediafiles/back.svg" width="50" height="50">
+    </a>
+    <h2>New post</h2>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+    {% else %}
+    <h2>Access Denied!</h2>
+    <p>You must to login to post.</p>
+    {% endif %}
+{% endblock %}
