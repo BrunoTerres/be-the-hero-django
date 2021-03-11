@@ -49,7 +49,7 @@ Released   : 20131010
             <div id="menu">
                 <ul>
                     <li><a href="{% url 'home:tools' %}" accesskey="2" title="">Tools</a></li>
-                    <li><a href="#experience" accesskey="3" title="">Experience</a></li>
+                    <li><a href="#portfolio" accesskey="3" title="">Experience</a></li>
                     <li><a href="{% url 'home:contact' %}" accesskey="3" title="" class="contact-btn">Contact</a></li>
                     <li><a href="{% url 'home:bio' %}" accesskey="4" title="">About</a></li>
                 </ul>
@@ -75,7 +75,7 @@ Released   : 20131010
                     <img src='/mediafiles/lighting.svg' alt="Fast" width="100" height="100"/>
                 </div>
                 <div class="title">
-                    <h2>Fast</h2>
+                    <h2>FAST</h2>
                 </div>
             </div>
             <div id="tbox2">
@@ -83,8 +83,9 @@ Released   : 20131010
                     <img src='/mediafiles/cloud-computing.svg' alt="Cloud Computing" width="100" height="100"/>
                 </div>
                 <div class="title">
-                    <h2>HIGHLY <br>AVAILABLE</h2>
+                    <h2>CLOUD <br>BASED</h2>
                 </div>
+                <a href="#portfolio" class="button-exp button button-small" accesskey="3" title="">Experience</a>
             </div>
 
             <div id="tbox3">
@@ -92,9 +93,10 @@ Released   : 20131010
                     <img src='/mediafiles/shield.svg' alt="Safe" width="100" height="100"/>
                 </div>
                 <div class="title">
-                    <h2>Safe</h2>
+                    <h2>SAFE</h2>
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -119,8 +121,14 @@ Released   : 20131010
 
                         <h3 class="job-title">Be The Hero</h3>
                         <p class="job-description">Application to connect NGOs and other institutions to people who are available to help.</p>
-                        <a href="http://localhost:8000/hero" class="button button-small">More</a>
-                      </div>
+                        
+                        {% if user.is_authenticated %}
+                            <a href="http://localhost:8000/hero" class="button button-small">More</a>
+                        {% else %}
+                            <a href="http://localhost:8000/auth/login/" class="button button-small">More</a>
+                        {% endif %}  
+                                        
+                        </div>
                     </div>
 
                     <div class="col column">
@@ -132,7 +140,13 @@ Released   : 20131010
   
                           <h3 class="job-title">Django Blog</h3>
                           <p class="job-description">A generic Django Blog Web App that receive Posts and Comments.</p>
-                          <a href="http://localhost:8000/blog" class="button button-small">More</a>
+                          
+                          {% if user.is_authenticated %}
+                            <a href="http://localhost:8000/blog" class="button button-small">More</a>
+                          {% else %}
+                             <a href="http://localhost:8000/auth/login/" class="button button-small">More</a>
+                          {% endif %}
+                          
                         </div>
                       </div>
 
@@ -145,7 +159,14 @@ Released   : 20131010
   
                           <h3 class="job-title">Safe place</h3>
                           <p class="job-description">A Web App developed to make shared environments safer in Covid-19 pandemic times.</p>
-                          <a href="" class="button button-small">More</a>
+                          
+                          {% if user.is_authenticated %}
+                            <a href="" class="button button-small">More</a>
+                          {% else %}
+                            <a href="http://localhost:8000/auth/login/" class="button button-small">More</a>
+                          {% endif %}  
+                          
+                        
                         </div>
                       </div>
                 

@@ -15,7 +15,7 @@
 
         <d1>
         {% for incident in ngo.incident_set.all %}
-            <dt><a href="{% url 'incident-detail' incident.pk %}">{{ incident }}</a></dt>
+            <dt><a href="{% url 'hero:incident-detail' incident.pk %}">{{ incident }}</a></dt>
             <dd>{{ Incident.description }}</dd>
         {% endfor %}
         </d1>

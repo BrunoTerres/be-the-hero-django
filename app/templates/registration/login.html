@@ -19,6 +19,16 @@
         {% endif %}
 
         {% if user.is_authenticated %}
+
+        <h3>Hello {{ user.get_username }}</h3>
+
+        <p>Thanks for logging in, now you can post in the Blog and create new NGO incidents.</p>
+        
+        <a href="{% url 'logout'%}?next={{request.path}}">Logout</a>
+        
+        <img src="/mediafiles/highfive.png" alt="high-five" width="350" height="400">
+        {% else %}
+
         <section class="form">
           <h1> Login </h1>
           <form method="post" action="{% url 'login' %}">
@@ -40,16 +50,13 @@
           <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
           <p><a href="{% url 'signup' %}">I don't have a account</a></p>
         </section>
-        {% else %}
-        <h2>You Are Logged!</h2>
 
-        <p>thanks for logging in, now you can post to the Blog and create new NGOs.</p>
         {% endif %}
       </div>
         
       <div class="col-md-5 login-app-container">
-
-        <a href="http://localhost:8000/blog">
+        
+        <a href="http://localhost:8000/hero">
           <div class="row login-app-button">
               
               <div class="col-md-5">  

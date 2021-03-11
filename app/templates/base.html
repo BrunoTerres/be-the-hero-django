@@ -19,13 +19,15 @@
 <body>
 
     <div class="header">
+        <a href="{% url 'home:home' %}">HomePage</a>
+        <a href="{% url 'login' %}">Apps</a>
         <a href="" class="logo">   
             <img src='/mediafiles/logo_2mLetLB.svg' alt="Be The Hero" width="100" height="50"/>
         </a>
         <div class="header-right">
           <a href="{% url 'hero:ngos' %}">NGOs</a>
           <a href="{% url 'hero:incidents' %}">Incidents</a>
-          <a class="active" href="{% url 'login' %}?next={{ request.path }}">login</a>
+          <a href="{% url 'login' %}?next={{ request.path }}">login</a>
           <a href="#about">About</a>
         </div>
       </div> 

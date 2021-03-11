@@ -1,12 +1,6 @@
 {% extends 'blog/index.html' %}
 
 {% block content_post %}
-    
-    {% if user.is_authenticated %}
-    <a href="{% url 'blog:post_new' %}" class="top-menu">
-        <img src="/mediafiles/plus.svg" alt="New Post" width="50" height="50">
-    </a>
-    {% endif %}
 
     {% for post in post_list %}
 

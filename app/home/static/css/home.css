@@ -164,6 +164,8 @@ a:hover {
 {
     padding: 5em 0em;
     text-align: center;
+    position: relative;
+    float: right;
 }
 
 #logo h1
@@ -256,6 +258,7 @@ a:hover {
 
 #wrapper3
 {
+    height: 850px;
     overflow: hidden;
     padding: 8em 0em;
     background: #FFF;
@@ -267,6 +270,9 @@ a:hover {
     padding: 8em 0em 4em 0em;
 }
 
+#portfolio {
+    padding-top: 5em;
+}
 
 #footer
 {
@@ -456,4 +462,10 @@ a:hover {
 .contact {
     position: relative;
     margin-top: 2em;
+}
+
+.button-exp {
+    font-size: 0.75em;
+    position: relative;
+    top: 2em;
 }
