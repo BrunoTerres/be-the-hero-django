@@ -1,5 +1,5 @@
 import datetime
-
+from datetime import date, timedelta
 from django.shortcuts import redirect
 from django.shortcuts import render
 from django.views import generic 
@@ -44,7 +44,11 @@ class PostListView(generic.ListView):
     paginate_by = '4'
 
     def get_queryset(self):
-        return Post.objects.order_by('-created')
+        startdate = date.today()
+        enddate = startdate + timedelta(days=6)
+        posts = Post.objects.filter(created__range=[startdate, enddate])
+
+        return posts
     
     def get_context_data(self, **kwargs):
         context=super(PostListView, self).get_context_data(**kwargs)
