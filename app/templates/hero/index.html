@@ -2,14 +2,75 @@
 
 {% block title %}<title>Local Library</title>{% endblock %}
 {% block content %}
-    <h1>Be The Hero</h1>
-    <p>Welcome to Be The Hero, a website developed by <em>Bruno Terres</em>!</p>
-    <h2>Dynamic content</h2>
-    <p>We have the following record counts:</p>
-    <ul>
-        <li><strong>Incidents:</strong> {{ num_incidents }}</li>
-        <li><strong>NGO's:</strong>{{ num_ngos }}</li>
-    </ul>
 
-    <p>You have visited this page {{ num_visits }} time{% if num_visits > 1 %}s{% endif %}.</p>
+<div class="row">
+    <div class="col-md-10 about">
+        {% if user.is_authenticated %}
+        <h2>Welcome to <strong>Hero</strong></h2>
+
+        <p class="about-txt">                
+            A Django-based adaptation of the <strong>Be The Hero </strong> application, taught at the 11th edition of the week OmniStack
+            Developed by Rocketseat. Originally done entirely with the JavaScript libraries React and React Native in conjunction with Node.js
+            and an SQLite database.
+            At this version I use a Python Stack, with the Django framework as a backend together with Gunicorn and Nginx to serve
+            HTML templates and statistical files, as well as a PostgreSQL database.
+
+            Be The Hero (django version)
+            Application to connect NGOs and other institutions to people who are available to help.
+            Powered By Django, developed by <em>Bruno Terres</em>!
+        </p>
+        
+        <p>
+            Hello <strong>{{ user.get_username }}</strong> now you can create NGOs and Incidents, try it!
+        </p>
+
+        <h4>COUNTER</h4>
+        <p>NGOs: {{ num_ngos }}</p>
+        <p>Incidents: {{ num_incidents }}</p>
+
+        <p>
+            All NGOs registered here are just ficticial examples to show you the <strong>Hero</strong> aplication.
+            Email sender is deactivated to avoid spam.
+        </p>
+
+        {% else %}
+
+        <h2>Welcome to <strong>Hero</strong></h2>
+
+        <p>                
+            A Django-based adaptation of the <strong>Be The Hero </strong> application, taught at the 11th edition of the week OmniStack
+            Developed by Rocketseat. Originally done entirely with the JavaScript libraries React and React Native in conjunction with Node.js
+            and an SQLite database.
+            At this version I use a Python Stack, with the Django framework as a backend together with Gunicorn and Nginx to serve
+            HTML templates and statistical files, as well as a PostgreSQL database.
+
+            Be The Hero (django version)
+            Application to connect NGOs and other institutions to people who are available to help.
+            Powered By Django, developed by <em>Bruno Terres</em>!
+        </p>
+       
+        <p><strong><a href="{% url 'login' %}">Login</a>to Create NGOs and Incidents.</strong></p>
+
+        <h4>COUNTER</h4>
+        <p>NGOs: {{ num_ngos }}</p>
+        <p>Incidents: {{ num_incidents }}</p>
+
+        <p>
+            All NGOs registered here are just ficticial examples to show you the <strong>Hero</strong> aplication.
+            Email sender is deactivated to avoid spam.
+        </p>
+
+        {% endif %}
+    </div>
+     
+</div>
+
+
+<div class="return">
+    <h3 >Or Return to :</h3>
+    <div class="row">
+        <a href="{% url 'home:home' %}" class="col-md-3 button return-btn">HomePage</a>
+        <a href="{% url 'login' %}" class="col-md-3 button return-btn">Apps</a>
+    </div>
+</div>
 {% endblock %}

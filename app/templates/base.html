@@ -18,24 +18,32 @@
 </head>
 <body>
 
-    <div class="header">
-        <a href="{% url 'home:home' %}">HomePage</a>
-        <a href="{% url 'login' %}">Apps</a>
-        <a href="" class="logo">   
-            <img src='/mediafiles/logo_2mLetLB.svg' alt="Be The Hero" width="100" height="50"/>
-        </a>
+    <div id="menu" class="header">
+
+            <a href="" class="logo">   
+                <img src='/mediafiles/logo_2mLetLB.svg' alt="Be The Hero" width="100" height="50"/>
+            </a>
+
         <div class="header-right">
-          <a href="{% url 'hero:ngos' %}">NGOs</a>
-          <a href="{% url 'hero:incidents' %}">Incidents</a>
-          <a href="{% url 'login' %}?next={{ request.path }}">login</a>
-          <a href="#about">About</a>
+
+            <ul>
+                <li><a href="{% url 'hero:index' %}" class="header-link">About</a></li>
+                <li><a href="{% url 'hero:ngos' %}" class="header-link">NGOs</a></li>
+                <li><a href="{% url 'hero:incidents' %}" class="header-link">Incidents</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+                {% else %}
+                <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+                {% endif %}
+            </ul>
+
         </div>
-      </div> 
+      
+    </div> 
 
     <div class="container-fluid content-container">
         <div class="row">
 
-            <div class="col-sm-10">
 
                 <div class="block-content">
                 {% block content %}
@@ -59,7 +67,7 @@
                         </div>
                     {% endif %}
                 {% endblock %}
-            </div>
+
         </div>
     </div>
 </body>

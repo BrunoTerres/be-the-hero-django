@@ -134,6 +134,12 @@ form textarea {
   float: right;
 }
 
+.header-right a {
+  margin-left: 3em;
+  position: relative;
+  right: 2em;
+}
+
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 @media screen and (max-width: 500px) {
   .header a {
@@ -153,4 +159,69 @@ form textarea {
 .block-content {
   margin: 80px;
   margin-top: 20px;
+}
+
+
+#menu
+{
+}
+
+#menu ul
+{
+    text-align: center;
+}
+
+#menu li
+{
+    display: inline-block;
+}
+
+#menu li a, #menu li span
+{
+    display: inline-block;
+    margin-left: 0.50em;
+    padding: 1em 1.5em;
+    letter-spacing: 0.20em;
+    text-decoration: none;
+    font-size: 0.90em;
+    font-weight: 600;
+    text-transform: uppercase;
+    outline: 0;
+    color: black;
+}
+
+#menu li:hover a, #menu li.active a, #menu li.active span
+{
+    border-radius: 8px;
+    background-color: #ddd;
+    color: black;
+}
+
+#menu .current_page_item a
+{
+    background: #037a15 ;
+    border-radius: 8px;
+    color: #FFF;
+}
+
+.return {
+  text-align: center;
+}
+
+.return-btn {
+  margin: auto;
+}
+
+.about {
+  text-align: center;
+  margin: auto;
+  margin-top: 0;
+}
+
+.about p {
+  font-size: 1.25em;
+}
+
+.about-txt {
+  line-height: 140%;
 }
